@@ -1,0 +1,17 @@
+Release 1.1 of 15 August 2007
++ Added new AlignMenuToMaster property to TPJLinkedMenuSpeedButton.
++ Added new TriggerDefMenuItem property to TPJLinkedSpeedButton.
++ Added topics for new properties to help file and updated copyright message.
++ Added a-link keyword file for use with Delphi 6 & 7 OpenHelp system.
++ Changed to Mozilla Public License.
+
+Release 1.0.1 of 11 September 2003
++ Changed component palette from PJSoft to DelphiDabbler.
++ Updated help file window and copyright message.
++ Changed icon used by demo project from PJSoft to DelphiDabbler.
+
+Release 1.0 of 23 June 2001
++ Original version:
+  - Components
+  - Demo project
+  - Help file

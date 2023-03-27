@@ -1,0 +1,672 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+	<title>
+		DelphiDabbler.com Info Sheet: Menu Speed Button Components
+	</title>
+
+	<style type="text/css">
+		<!--
+		body {
+			margin: 1em;
+			padding: 0;
+			font-family: Verdana, Arial, sans-serif;
+			font-size: 9pt;
+			line-height: 150%;
+		}
+		h1 {
+			margin: 0 0 1em 0;
+			padding: 0.5em;
+			border: 1px silver solid;
+			background-color: #eee;
+			font-size: 13pt;
+			font-weight: bold;
+			text-align: center;
+		}
+		h1 .subtitle {
+			font-style: italic;
+			color: #336;
+		}
+		h2 {
+			margin: 1em 0 0 0;
+			padding: 0;
+			padding-bottom: 6px;
+			border-bottom: 1px silver solid;
+			font-size: 11pt;
+			font-weight: bold;
+		}
+		h3 {
+			margin: 0.5em 0 0 0;
+			padding: 0;
+			font-size: 9pt;
+			font-weight: bold;
+		}
+		p {
+			margin: 0.5em 0 0 0;
+			padding: 0;
+		}
+		ul, ol {
+			margin: 0.5em 0 0 3em;
+			padding: 0;
+		}
+		ul {
+			list-style-type: square;
+		}
+		ul.spaced li,
+		ol.spaced li {
+			margin-top: 0.5em;
+		}
+		ul.spaced li,
+		ol.spaced li {
+			margin-top: 0.5em;
+		}
+		ul.unspaced li,
+		ol.unspaced li {
+			margin-top: 0;
+		}
+		ul.unspaced li.first,
+		ol.unspaced li.first {
+			margin-top: 0.5em;
+		}
+		code {
+			font-family: "Courier New", Courier, monospace;
+		}
+		a:link {
+			color: #336;
+			text-decoration: underline;
+		}
+		a:visited {
+			color: #669;
+			text-decoration: underline;
+		}
+		a:active {
+			color: #336;
+			text-decoration: underline;
+		}
+		a:hover {
+			text-decoration: underline;
+		}
+		.gototop {
+			margin: 1em 0 0 0;
+			padding: 0.3em 0 0 0;
+			text-align: center;
+			position: relative;
+			float: right;
+			font-weight: bold;
+		}
+		.pullout {
+			border-left: 8px silver solid;
+			background-color: #eee;
+			margin: 0.5em 0.25em 0.25em 0.25em;
+			padding: 0.25em 0.5em;
+			font-style: italic;
+		}
+		.pullout .caption {
+			text-align: center;
+			font-weight: bold;
+			margin-bottom: 0.25em;
+			zmargin-top: 0.25em;
+		}
+		.pullout .content {
+			margin-bottom: 0.25em;
+		}
+		.indent {
+			margin-left: 3em;
+		}
+		.highlight {
+			color: #336;
+			font-style: italic;
+			font-weight: bold;
+		}
+		.endnotes {
+			margin: 1.5em 0 0 0;
+			padding: 1em 0 0 0;
+			border-top: 1px silver solid;
+		}
+		.comments {
+			font-style: italic;
+		}
+		.copyright,
+		.copyright a:link,
+		.copyright a:visited,
+		.copyright a:active {
+			margin: 1em 0 0 0;
+			color: gray;
+			font-size: 8pt;
+			text-align: right;
+		}
+		-->
+	</style>
+
+</head>
+
+
+
+<body>
+
+
+<h1>
+	Menu Speed Button Components<br />
+	<span class="subtitle">Information Sheet</span>
+</h1>
+
+
+
+<h2 id="contents">
+	Contents
+</h2>
+
+<ul>
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#compatibility">Compatibility</a></li>
+  <li><a href="#installation">Installation</a></li>
+  <li><a href="#bugs">Bugs</a></li>
+  <li><a href="#changelog">Change Log</a></li>
+  <li><a href="#license">License</a></li>
+  <li><a href="#author">About the Author</a></li>
+</ul>
+
+
+<p class="gototop">
+	&raquo; <a href="#contents">Contents</a>
+</p>
+
+<h2 id="overview">
+	Overview
+</h2>
+
+<p>
+	This unit contains a set of three speed button derived components that
+	either display pop-up menus associated with the buttons or form connected
+	button / menu button pairs. The components are:
+</p>
+
+<ul class="spaced">
+	<li>
+		<var>TPJMenuSpeedButton</var> &ndash; can display an associated pop-up
+		menu  when clicked.
+	</li>
+	<li>
+		<var>TPJLinkedMenuSpeedButton</var> &ndash; links to a master
+		<var>TPJLinkedSpeedButton</var> button and displays an associated pop-up
+		menu when clicked.
+	</li>
+	<li>
+		<var>TPJLinkedSpeedButton</var> &ndash; a speed button that can link to
+		and control a slave <var>TPJLinkedMenuSpeedButton</var> that displays a
+		pop-up menu.
+	</li>
+</ul>
+
+<div id="frozen" class="pullout" style="margin-top:10pt;">
+	<div class="caption">
+		Development of the menu speed buttons is now frozen
+	</div>
+	<div class="content">
+		These components were originally written back in 2001 to get round a
+		well known display problem that Delphi's tool button control had with
+		some current display drivers (as on an old Dell machine of mine). I used
+		speed buttons to avoid having to use tool buttons, and needed a button
+		that supported drop down menus, so wrote the components.
+	</div>
+	<div class="content">
+		Now that those driver problems are long gone, the original justification
+		has disappeared: these days I use standard tool buttons and action bars.
+	</div>
+	<div class="content">
+		Furthermore, the design of the menu speed button components doesn't lend
+		itself easily to the application of XP themes, let alone Vista look and
+		feel, so I'm not going to add this feature.
+	</div>
+	<div class="content">
+		So, the final release 1.1 was issued on 15th August 2007 and it added a
+		feature requested by a user. At the same time I've licensed the code
+		under the Mozilla Public License. I'll be leaving the code on the site
+		for the foreseeable future, but will not be updating it.
+	</div>
+	<div class="content">
+		If you want to take on maintenance please go ahead. The download
+		includes the components' source files and other assets, and all source
+		files and bitmaps required to build (and change) the help file. I'd be
+		interested to know about any changes you make the the components.
+	</div>
+</div>
+
+
+<p class="gototop">
+	&raquo; <a href="#contents">Contents</a>
+</p>
+
+<h2 id="compatibility">
+	Compatibility
+</h2>
+
+<p>
+	These components are believed to be compatible with Delphi 4 and higher.
+	They have been tested with Delphi 4, 6 and 7.
+</p>
+
+
+<p class="gototop">
+	&raquo; <a href="#contents">Contents</a>
+</p>
+
+<h2 id="installation">
+	Installation
+</h2>
+
+<p>
+	The Menu Speed Button components, documentation and demo program are
+	supplied in a zip file. Before installing you need to extract all the files
+	from the zip file, preserving the directory structure. The following files
+	will be extracted:
+</p>
+
+<ul>
+
+	<li>
+		<strong><code>PJMenuSpeedButtons.pas</code></strong> &ndash; component
+		source file.
+	</li>
+
+	<li>
+		<strong><code>PJMenuSpeedButtons.dcr</code></strong> &ndash; resource
+		file containing component palette glyphs.
+	</li>
+
+	<li>
+		<strong><code>PJMenuSpeedButtons.res</code></strong> &ndash; resource
+		file containing default glyph for <var>TPJLinkedMenuSpeedButton</var>
+		component.
+	</li>
+
+	<li>
+		<code>PJMenuSpeedButtons.hlp</code> &ndash; help file that
+		integrates with the Delphi 3 to 7 OpenHelp system.
+	</li>
+
+	<li>
+		<code>PJMenuSpeedButtons.als</code> &ndash; a-link keyword file for
+		integration with the Delphi 6 or 7 OpenHelp system.
+	</li>
+
+	<li>
+		<code>PJMenuSpeedButtons.rc</code> &ndash; source code for
+		<code>PJMenuSpeedButtons.res</code>.
+	</li>
+	
+	<li>
+		<code>DropDown.bmp</code> &ndash; default gylph referenced by
+		<code>PJMenuSpeedButtons.rc</code>.
+	</li>
+	
+	<li>
+		<code>ReadMe.htm</code> &ndash; this file.
+	</li>
+	
+	<li>
+		<code>ChangeLog.txt</code> &ndash; component's change log.
+	</li>
+
+	<li>
+		<code>Demo\DelphiDabbler.ico</code> &ndash; demo program icon.
+	</li>
+
+	<li>
+		<code>Demo\PJMenuSpeedButtonsDemo.dpr</code> &ndash; demo project file.
+	</li>
+	
+	<li>
+		<code>Demo\PJMenuSpeedButtonsDemo.res</code> &ndash; icon resource for
+		demo.
+	</li>
+
+	<li>
+		<code>Demo\PJMenuSpeedButtonsDemo.cfg</code> &ndash; config file for
+		compiling demo project.
+	</li>
+	
+	<li>
+		<code>Demo\FmPJMenuSpeedButtonsDemo.pas</code> &ndash; demo form source
+		file.
+	</li>
+
+	<li>
+		<code>Demo\FmPJMenuSpeedButtonsDemo.dfm</code> &ndash; demo form file.
+	</li>
+	
+	<li>
+		<code>Help\PJMenuSpeedButtons.hpj</code> &ndash; help project file.
+	</li>
+	
+	<li>
+		<code>Help\PJMenuSpeedButtons.rtf</code> &ndash; source document used in
+		compiling help file.
+	</li>
+	
+	<li>
+		<code>Help\PJLinkedMenuSpeedButton.bmp</code> &ndash; bitmap used in
+		compiling help file.
+	</li>
+	
+	<li>
+		<code>Help\PJLinkedSpeedButton.bmp</code> &ndash; bitmap used in
+		compiling help file.
+	</li>
+	
+	<li>
+		<code>Help\PJMenuSpeedButton.bmp</code> &ndash; bitmap used in compiling
+		help file.
+	</li>
+	
+</ul>
+
+<p>
+	You can now proceed to install the components using the
+	<strong>emphasised</strong> files above. Installation methods vary between
+	Delphi versions, so follow the instructions that apply to your version. Note
+	that <code><strong>$(DELPHI)</strong></code> represents the path where the
+	appropriate version of Delphi was installed. Similarly
+	<code><strong>$(BDS)</strong></code> refers to the installation path of a
+	version of the Borland Development System.
+</p>
+
+<ul>
+	<li><a href="#bds">Installation with Delphi 2005 &amp; 2006</a></li>
+	<li><a href="#d4">Installation with Delphi 4 to 7</a></li>
+</ul>
+
+
+
+<h3 id="bds">
+	Installation with Delphi 2005 &amp; 2006
+</h3>
+
+<p>
+	The components must be installed into a Delphi Win32 design package. It is
+	assumed that you will be installing into an existing package. You may decide
+	to install into the &quot;user&quot; package:
+	<code>$(BDS)\Lib\dclusr.dpk</code>.
+</p>
+
+<ol class="spaced">
+
+	<li>
+		Decide upon a suitable location into which to install the components.
+		This may be a subdirectory of your <code>Borland Studio Projects</code>
+		or <code>$(BDS)\lib</code> folders.
+	</li>
+	
+	<li>
+		Copy <code>PJMenuSpeedButtons.pas</code>,
+		<code>PJMenuSpeedButtons.dcr</code> and
+		<code>PJMenuSpeedButtons.res</code> to the chosen installation folder.
+	</li>
+	
+	<li>
+		Start the Development System (selecting the Delphi Win32 personality if
+		appropriate) then:
+
+		<ul>
+
+			<li>
+				Open the required package. Select <em>File | Open</em> menu and
+				choose a suitable package source file.
+			</li>
+
+			<li>
+				The package will now be displayed in the Project Manager with a
+				<code>.bpl</code> extension. Right click the package's entry and
+				select <em>Add</em> to display the <em>Add</em> dialog box.
+				Enter the full path to <code>PJMenuSpeedButtons.pas</code> in
+				the <em>Unit file name</em> edit box (use the <em>Browse</em>
+				button to navigate to the file). Click <em>OK</em> to add the
+				component to the package.
+			</li>
+			
+			<li>
+				Back in the Project Manager, check that all the added files
+				appear under the package's <em>Contains</em> node. If so, right
+				click the package's entry again and select <em>Compile</em>. If
+				the resulting compilation succeeds a message should be displayed
+				confirming that <var>TPJMenuSpeedButton</var>,
+				<var>TPJLinkedSpeedButton</var> and
+				<var>TPJLinkedMenuSpeedButton</var> have been registered. The
+				components should now appear in the &quot;DelphiDabbler&quot;
+				section of the Tool Palette. (Note that this will only appear
+				when a form is selected in the designer).
+			</li>
+			
+			<li>
+				If the components do not appear, the package may not have been
+				installed. Install it from the Project Manager by selecting the
+				package's <em>Install</em> right click menu option.
+			</li>
+
+			<li>
+				Close the package project using the <em>File | Close</em> menu
+				item. Accept any prompt that offers to save the package project.
+			</li>
+			
+		</ul>
+		
+	</li>
+
+	<li>
+		If you wish you can now delete <code>PJMenuSpeedButtons.pas</code> and
+		from the chosen installation folder.
+	</li>
+	
+	<li>
+		The supplied help file cannot be integrated with the IDE's help system.
+		However it can be used independently of the IDE, albeit with reduced
+		functionality.
+	</li>
+
+	<li>
+		The demo program can be loaded into Delphi and compiled and run as
+		required.
+	</li>
+
+</ol>
+
+
+<h3 id="d4">
+	Installation with Delphi 4 to 7
+</h3>
+
+<p>
+	The components must be installed into a design package. It is assumed that
+	you will be installing into an existing package. You may wish to use the
+	&quot;user&quot; package named <code>dclusr.dpk</code> or
+	<code>dclusrXX.dpk</code> (where <code>XX</code> is a version number). This
+	package can be found in <code>$(DELPHI)\Lib</code>. For Delphi 6 and 7 
+	ensure that the chosen package &quot;requires&quot;
+	<code>designide.dcp</code>. 
+</p>
+
+<ol class="spaced">
+
+	<li>
+		Decide upon a suitable location into which to install the components.
+		This may be a subdirectory of your <code>$(DELPHI)\lib</code> folder.
+	</li>
+	
+	<li>
+		Copy <code>PJMenuSpeedButtons.pas</code>,
+		<code>PJMenuSpeedButtons.dcr</code> and
+		<code>PJMenuSpeedButtons.res</code> to the chosen installation folder.
+	</li>
+
+	<li>	
+		Start Delphi then:
+		
+		<ul>
+			
+			<li>
+				Choose the <em>Component | Install Component</em> menu option to
+				display the <em>Install Component</em> dialog box. Ensure the
+				<em>Into existing package</em> tab is selected. Enter the full
+				path to <code>PJMenuSpeedButtons.pas</code> in the <em>Unit file
+				name</em> edit box. (Use the adjacent <em>Browse</em> button to
+				navigate to the file). Choose the required package from the
+				<em>Package description</em> combo box, or by navigating to the
+				package using the <em>Browse</em> button. Click <em>OK</em> to
+				confirm your selections. 
+			</li>
+
+			<li>
+				A confirmation dialog box may displayed, querying whether it is
+				OK to rebuild and reinstall the package. Click <em>Yes</em> to
+				proceed.
+			</li>
+			
+			<li>
+				The package will now be built and a dialog box should be
+				displayed stating that the <var>TPJMenuSpeedButton</var>,
+				<var>TPJLinkedSpeedButton</var> and
+				<var>TPJLinkedMenuSpeedButton</var> components have been
+				installed. Click <em>OK</em> to dismiss the dialog box.
+			</li>
+
+			<li>
+				The components will appear on the &quot;DelphiDabbler&quot;
+				palette.
+			</li>
+
+		</ul>
+
+	</li>
+
+	<li>
+		If you wish you can now delete <code>PJMenuSpeedButtons.pas</code> from
+		the chosen installation folder.
+	</li>
+	
+	<li>
+		The provided help file can be integrated with the IDE's OpenHelp system.
+		Delphi 6 and 7 also require the use of the supplied <code>.als</code>
+		file. The simplest way to install the help file is to use my
+		<a href="http://www.delphidabbler.com/software?id=chi">Component Help
+		Installer Expert</a> (v2.2.1 or later). If you prefer to install
+		manually,
+		<a href="http://www.delphidabbler.com/articles?article=15">this
+		article</a> explains the process.
+	</li>
+
+	<li>
+		The demo program can be loaded into Delphi and compiled and run as
+		required.
+	</li>
+
+</ol>
+
+
+<p class="gototop">
+	&raquo; <a href="#contents">Contents</a>
+</p>
+
+<h2 id="bugs">
+	Bugs
+</h2>
+
+<p>
+	No bugs reported to date.
+</p>
+
+
+<p class="gototop">
+	&raquo; <a href="#contents">Contents</a>
+</p>
+
+<h2 id="changelog">
+	Change Log
+</h2>
+
+<p>
+	A complete change log is provided in a text file that is included in the
+	download.
+</p>
+
+
+<p class="gototop">
+	&raquo; <a href="#contents">Contents</a>
+</p>
+
+<h2 id="license">
+	License
+</h2>
+
+<p>
+	This product, <em>Menu Speed Button Components</em>, is subject to the
+	Mozilla Public License Version 1.1 (the &quot;License&quot;). You may not
+	use this product except in compliance with the License. You may obtain a
+	copy of the License at
+	<a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a>.
+</p>
+
+<p>
+	Software distributed under the License is distributed on an &quot;AS
+	IS&quot; basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See
+	the License for the specific language governing rights and limitations under
+	the License.
+</p>
+
+<p>
+	The Initial Developer of <em>Menu Speed Button Components</em> is Peter D
+	Johnson. Portions created by the Initial Developer are Copyright &copy;
+	2001-2007 Peter D Johnson
+	(<a href="http://www.delphidabbler.com/">www.delphidabbler.com</a>). All
+	Rights Reserved.
+</p>
+
+<p>
+	Contributor(s) to this project: none.
+</p>
+
+<p>
+	All relevant trademarks are acknowledged.
+</p>
+
+
+<p class="gototop">
+	&raquo; <a href="#contents">Contents</a>
+</p>
+
+<h2 id="author">
+	About the author
+</h2>
+
+<p>
+	I'm Peter Johnson &ndash; a hobbyist programmer living in Ceredigion in West
+	Wales,  UK, writing write mainly in Delphi. My programs are available for
+	download from
+	<a href="http://www.delphidabbler.com/">www.delphidabbler.com</a>.
+</p>
+
+
+<div class="endnotes">
+
+	<div class="comments">
+		Please
+		<a href="http://www.delphidabbler.com/contact">
+		let me know</a> if you have any comments about the components, if you
+		have found a bug, or you want to suggest any updates.
+	</div>
+
+	<div class="copyright">
+		This info sheet is copyright &copy; 2007, P D Johnson,
+		<a href="http://www.delphidabbler.com/">
+		www.delphidabbler.com</a>
+	</div>
+
+</div>
+
+</body>
+
+</html>

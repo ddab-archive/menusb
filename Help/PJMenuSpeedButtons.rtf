@@ -1,0 +1,821 @@
+{\rtf1\ansi\ansicpg1252\deff0\deftab720\deflang2057
+{\fonttbl{\f0\fswiss Arial;}{\f1\fnil \fcharset2 WingDings;}{\f2\fmodern Courier New;}{\f3\fswiss \fcharset0 Arial;}{\f4\fmodern \fcharset0 Courier New;}{\f5\fnil \fcharset0 Arial;}}
+{\colortbl\red0\green0\blue0;\red0\green128\blue0;\red0\green0\blue255;}
+#{\footnote {#}IDH_PJMENUSPEEDBUTTONS}
+${\footnote {$}PJMenuSpeedButtons unit}
+K{\footnote {K}PJMenuSpeedButtons}
+A{\footnote {A}PJMenuSpeedButtons}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b PJMenuSpeedButtons unit\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard This unit contains a set of speed button derived components that either display pop-up menus associated with the buttons or form connected button / menu button pairs.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The main components are:
+\par \plain\f0\fs8\cf0 
+\par \pard \tx400 \plain\f1\fs18\cf0 \'A7\plain\f0\fs18\cf0 \tab {\strike TPJMenuSpeedButton}{\v IDH_MSB_CLASS}
+\par \plain\f1\fs18\cf0 \'A7\plain\f0\fs18\cf0 \tab {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f1\fs18\cf0 \'A7\plain\f0\fs18\cf0 \tab {\strike TPJLinkedSpeedButton}{\v IDH_LSB_CLASS}
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The unit also defines the base classes for the components and enumerated types required by them.
+\par \page 
+#{\footnote {#}IDH_USB_CLASS}
+${\footnote {$}TPJUngroupedSpeedButton}
+K{\footnote {K}TPJUngroupedSpeedButton}
+A{\footnote {A}TPJUngroupedSpeedButton_object;TPJUngroupedSpeedButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJUngroupedSpeedButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\ul Heirachy}{\v IDH_USB_HEIRACHY}          {\ul Properties}{\v IDH_USB_PROPERTIES}          {\ul Methods}{\v IDH_USB_METHODS}          {\ul Events}{\v IDH_USB_EVENTS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard TPJUngroupedSpeedButton is a class of speed button which is never grouped with others and which always returns to the up position after being clicked.
+\par 
+\par \plain\f0\fs18\cf0\b Unit\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 {\strike PJMenuSpeedButtons}{\v IDH_PJMENUSPEEDBUTTONS}
+\par 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This component is used as the base class for the PJSoft menu speed button components. The only value the the {\strike GroupIndex}{\v IDH_USB_GROUPINDEX} property can take is zero. Therefore all buttons based on this class always return to the up position after being clicked. This is the behaviour required of buttons that activate pop-up menus.
+\par \page 
+#{\footnote {#}IDH_USB_HEIRACHY}
+${\footnote {$}TPJUngroupedSpeedButton heirachy}
+
+\pard \plain \plain\f0\fs18\cf0\b Heirachy\plain\f0\fs18\cf0 
+\par 
+\par {\strike TObject}{\v !AL(TObject_object,1)}
+\par      |
+\par {\strike TPersistent}{\v !AL(TPersistent_object,1)}
+\par      |
+\par {\strike TComponent}{\v !AL(TComponent_object,1)}
+\par      |
+\par {\strike TControl}{\v !AL(TControl_object,1)}
+\par      |
+\par {\strike TGraphicControl}{\v !AL(TGraphicControl_object,1)}
+\par      |
+\par {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}
+\par \page 
+#{\footnote {#}IDH_USB_PROPERTIES}
+${\footnote {$}TPJUngroupedSpeedButton properties}
+
+\pard \plain \plain\f0\fs18\cf0\b Properties\plain\f0\fs18\cf0 
+\par 
+\par TPJUngroupedSpeedButton inherits all the properties of {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}. All work in the same way as in TSpeedButton except for the following redefined property:
+\par 
+\par \pard \tx200 \tab {\strike GroupIndex}{\v IDH_USB_GROUPINDEX}
+\par \page 
+#{\footnote {#}IDH_USB_GROUPINDEX}
+${\footnote {$}TPJUngroupedSpeedButton.GroupIndex}
+K{\footnote {K}GroupIndex,TPJUngroupedSpeedButton;TPJUngroupedSpeedButton,GroupIndex;GroupIndex;}
+A{\footnote {A}TPJUngroupedSpeedButton_GroupIndex;GroupIndex_property;GroupIndex}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJUngroupedSpeedButton.GroupIndex\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Redefined property that can only take the value 0.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  GroupIndex: Integer;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 In TPJUngroupedSpeedButton the GroupIndex can only take the value 0 - attempts to set to any other value. 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This ensures that the button behaves independently of all other buttons on the form. When it is clicked it returns the the up position automatically - it does not stay down.
+\par \page 
+#{\footnote {#}IDH_USB_METHODS}
+${\footnote {$}TPJUngroupedSpeedButton methods}
+
+\pard \plain \plain\f0\fs18\cf0\b Methods\plain\f0\fs18\cf0 
+\par 
+\par TPJUngroupedSpeedButton adds no methods to those inherited from {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}.
+\par \page 
+#{\footnote {#}IDH_USB_EVENTS}
+${\footnote {$}TPJUngroupedSpeedButton events}
+
+\pard \plain \plain\f0\fs18\cf0\b Events\plain\f0\fs18\cf0 
+\par 
+\par TPJUngroupedSpeedButton adds no events to those inherited from {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}.
+\par \page 
+#{\footnote {#}IDH_CMSB_CLASS}
+${\footnote {$}TPJCustomMenuSpeedButton}
+K{\footnote {K}TPJCustomMenuSpeedButton}
+A{\footnote {A}TPJCustomMenuSpeedButton_object;TPJCustomMenuSpeedButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJCustomMenuSpeedButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\ul Heirachy}{\v IDH_CMSB_HEIRACHY}          {\ul Properties}{\v IDH_CMSB_PROPERTIES}          {\ul Methods}{\v IDH_CMSB_METHODS}          {\ul Events}{\v IDH_CMSB_EVENTS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard TPJCustomMenuSpeedButton is the base class for speed buttons that can display an associated pop-up menu.
+\par 
+\par \plain\f0\fs18\cf0\b Unit\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 {\strike PJMenuSpeedButtons}{\v IDH_PJMENUSPEEDBUTTONS}
+\par 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 A speed button that has ability to display an associated pop-up menu. This base class defines, but does not publish, new properties. Descendent classes may
+\par publish required properties as required.\plain\f0\fs20\cf0 
+\par \page 
+#{\footnote {#}IDH_CMSB_HEIRACHY}
+${\footnote {$}TPJCustomMenuSpeedButton heirachy}
+
+\pard \plain \plain\f0\fs18\cf0\b Heirachy\plain\f0\fs18\cf0 
+\par 
+\par {\strike TObject}{\v !AL(TObject_object,1)}
+\par      |
+\par {\strike TPersistent}{\v !AL(TPersistent_object,1)}
+\par      |
+\par {\strike TComponent}{\v !AL(TComponent_object,1)}
+\par      |
+\par {\strike TControl}{\v !AL(TControl_object,1)}
+\par      |
+\par {\strike TGraphicControl}{\v !AL(TGraphicControl_object,1)}
+\par      |
+\par {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}
+\par      |
+\par {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}
+\par \page 
+#{\footnote {#}IDH_CMSB_PROPERTIES}
+${\footnote {$}TPJCustomMenuSpeedButton properties}
+
+\pard \plain \plain\f0\fs18\cf0\b Properties\plain\f0\fs18\cf0 
+\par \pard \tx200 
+\par Protected properties of TPJCustomMenuSpeedButton:
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 \tab {\strike ActiveMenu}{\v IDH_CMSP_ACTIVEMENU}
+\par \tab {\strike MenuPlacing}{\v IDH_CMSP_MENUPLACING}
+\par \tab {\strike ReleaseButton}{\v IDH_CMSB_RELEASEBUTTON}
+\par 
+\par Redefined property inherited from {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}:
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 \tab {\strike GroupIndex}{\v IDH_USB_GROUPINDEX}
+\par 
+\par \pard TPJCustomMenuSpeedButton also inherits unchanged all other properties of {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}.
+\par \page 
+#{\footnote {#}IDH_CMSP_ACTIVEMENU}
+${\footnote {$}TPJCustomMenuSpeedButton.ActiveMenu}
+K{\footnote {K}ActiveMenu,TPJCustomMenuSpeedButton;TPJCustomMenuSpeedButton,ActiveMenu;ActiveMenu}
+A{\footnote {A}TPJCustomMenuSpeedButton_ActiveMenu;ActiveMenu_property;ActiveMenu}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJCustomMenuSpeedButton.ActiveMenu\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Refers to the menu that this speed button pops-up.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  ActiveMenu: {\strike TPopupMenu}{\v !AL(TPopupMenu_object,1)};\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 ActiveMenu refers to a TPopupMenu component that is automatically popped-up when the speed button is clicked.
+\par \page 
+#{\footnote {#}IDH_CMSP_MENUPLACING}
+${\footnote {$}TPJCustomMenuSpeedButton.MenuPlacing}
+K{\footnote {K}MenuPlacing,TPJCustomMenuSpeedButton;TPJCustomMenuSpeedButton,MenuPlacing;MenuPlacing}
+A{\footnote {A}TPJCustomMenuSpeedButton_MenuPlacing;MenuPlacing_property;MenuPlacing}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJCustomMenuSpeedButton.MenuPlacing\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Determines where menu appears relative to the speed button.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b type\plain\f2\fs18\cf0  TPJMenuPlacing = (mpTopLeft, mpBottomLeft, 
+\par   mpTopRight, mpBottomRight);
+\par \plain\f2\fs8\cf0 
+\par \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  MenuPlacing: TPJMenuPlacing;
+\par \pard \plain\f0\fs18\cf0 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The position of the speed button's active pop-up menu relative to the speed button is determined by the MenuPlacing property. The property can take any value of the TPJMenuPlacing enumeration.
+\par 
+\par The menu appears as follows:
+\par \pard \fi-1600 \li1600 \tx1600 \plain\f0\fs8\cf0 
+\par \pard \fi-1600 \li1600 \tx1600 \brdrt \brdrs  \plain\f0\fs18\cf0 
+\par \pard \fi-1600 \li1600 \tx1600 \plain\f0\fs18\cf0\i mpTopLeft\plain\f0\fs18\cf0 \tab \plain\f0\fs20\cf0 Top-left of menu in same place as top-left of button\plain\f0\fs18\cf0 .
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0\i mpBottomLeft\plain\f0\fs18\cf0 \tab Menu appears immediately below button, aligned to button's left.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0\i mpTopRight\plain\f0\fs18\cf0 \tab Menu appear immediately to right of button, aligned to button top.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0\i mpBottomRight\plain\f0\fs18\cf0 \tab Top-left of menu adjacent to bottom-right of button.
+\par \pard \fi-1600 \li1600 \tx1600 \brdrb \brdrs \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard \fi-1600 \li1600 \tx1600 \plain\f0\fs8\cf0 
+\par \pard \plain\f0\fs18\cf0 The default value is mpBottomLeft.
+\par \page 
+#{\footnote {#}IDH_CMSB_RELEASEBUTTON}
+${\footnote {$}TPJCustomMenuSpeedButton.ReleaseButton}
+K{\footnote {K}ReleaseButton,TPJCustomMenuSpeedButton;TPJCustomMenuSpeedButton,ReleaseButton;ReleaseButton}
+A{\footnote {A}TPJCustomMenuSpeedButton_ReleaseButton;ReleaseButton_property;ReleaseButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJCustomMenuSpeedButton.ReleaseButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard ReleaseButton determines when the button is released after being clicked.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  ReleaseButton: Boolean;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 When ReleaseButton is False the speed button remains depressed while the active menu is displayed and it is released only when menu is closed. When ReleaseButton is True the speed button is immediately returned to its "up" state as soon as mouse button is released.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The default value is False.
+\par \page 
+#{\footnote {#}IDH_CMSB_METHODS}
+${\footnote {$}TPJCustomMenuSpeedButton methods}
+
+\pard \plain \plain\f0\fs18\cf0\b Methods\plain\f0\fs18\cf0 
+\par \pard \tx200 
+\par TPJCustomMenuSpeedButton introduces the following protected methods:
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 \tab {\strike DisplayMenu}{\v IDH_CMSB_DISPLAYMENU}
+\par \tab {\strike PopupPosition}{\v IDH_CMSB_POPUPPOSITION}
+\par 
+\par TPJCustomMenuSpeedButton also inherits all the method of {\strike TSpeedButton}{\v !AL(TSpeedButton,1)}. 
+\par \page 
+#{\footnote {#}IDH_CMSB_DISPLAYMENU}
+${\footnote {$}TPJCustomMenuSpeedButton.DisplayMenu}
+K{\footnote {K}DisplayMenu,TPJCustomMenuSpeedButton;TPJCustomMenuSpeedButton,DisplayMenu;DisplayMenu}
+A{\footnote {A}TPJCustomMenuSpeedButton_DisplayMenu;DisplayMenu_method;DisplayMenu}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJCustomMenuSpeedButton.DisplayMenu\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Displays the active pop-up menu.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b procedure\plain\f2\fs18\cf0  DisplayMenu(Pos: {\strike TPoint}{\v !AL(TPoint,1)}); \plain\f2\fs18\cf0\b virtual\plain\f2\fs18\cf0 ;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This method displays the speed button's active menu at the given point on the screen.
+\par 
+\par \page 
+#{\footnote {#}IDH_CMSB_POPUPPOSITION}
+${\footnote {$}TPJCustomMenuSpeedButton.PopupPosition}
+K{\footnote {K}PopupPosition,TPJCustomMenuSpeedButton;TPJCustomMenuSpeedButton,PopupPosition;PopupPosition}
+A{\footnote {A}TPJCustomMenuSpeedButton_PopupPosition;PopupPosition_method;PopupPosition}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJCustomMenuSpeedButton.PopupPosition\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Calculates the point where the speed button's active menu should be displayed.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b function\plain\f2\fs18\cf0  PopupPosition: {\strike TPoint}{\v !AL(TPoint,1)}; \plain\f2\fs18\cf0\b virtual\plain\f2\fs18\cf0 ;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This method calculates the point in screen coordinates where the speed button's active menu should be displayed. The position depends on the location of the speed button and the value of the {\strike MenuPlacing}{\v IDH_CMSP_MENUPLACING} property.
+\par 
+\par \page 
+#{\footnote {#}IDH_CMSB_EVENTS}
+${\footnote {$}TPJCustomMenuSpeedButton events}
+
+\pard \plain \plain\f0\fs18\cf0\b Events\plain\f0\fs18\cf0 
+\par 
+\par TPJCustomMenuSpeedButton adds no events to those inherited from {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}.
+\par \page 
+#{\footnote {#}IDH_MSB_CLASS}
+${\footnote {$}TPJMenuSpeedButton}
+K{\footnote {K}TPJMenuSpeedButton}
+A{\footnote {A}TPJMenuSpeedButton_object;TPJMenuSpeedButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \{bmlt PJMenuSpeedButton.bmp\}\plain\f0\fs22\cf2\b  TPJMenuSpeedButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\ul Heirachy}{\v IDH_MSB_HEIRACHY}          {\ul Properties}{\v IDH_MSB_PROPERTIES}          {\ul Methods}{\v IDH_MSB_METHODS}          {\ul Events}{\v IDH_MSB_EVENTS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard TPJMenuSpeedButton can display an associated pop-up menu when clicked.
+\par 
+\par \plain\f0\fs18\cf0\b Unit\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 {\strike PJMenuSpeedButtons}{\v IDH_PJMENUSPEEDBUTTONS}
+\par 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This is speed button that has the ability to display an associated pop-up menu. It simply declares protected properties inherited from {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS} as protected.\plain\f0\fs20\cf0 
+\par \page 
+#{\footnote {#}IDH_MSB_HEIRACHY}
+${\footnote {$}TPJMenuSpeedButton heirachy}
+
+\pard \plain \plain\f0\fs18\cf0\b Heirachy\plain\f0\fs18\cf0 
+\par 
+\par {\strike TObject}{\v !AL(TObject_object,1)}
+\par      |
+\par {\strike TPersistent}{\v !AL(TPersistent_object,1)}
+\par      |
+\par {\strike TComponent}{\v !AL(TComponent_object,1)}
+\par      |
+\par {\strike TControl}{\v !AL(TControl_object,1)}
+\par      |
+\par {\strike TGraphicControl}{\v !AL(TGraphicControl_object,1)}
+\par      |
+\par {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}
+\par      |
+\par {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}
+\par      |
+\par {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}
+\par \page 
+#{\footnote {#}IDH_MSB_PROPERTIES}
+${\footnote {$}TPJMenuSpeedButton properties}
+
+\pard \plain \plain\f0\fs18\cf0\b Properties\plain\f0\fs18\cf0 
+\par 
+\par TPJMenuSpeedButton provides all properties of {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}, with the following additional and altered properties:
+\par 
+\par \pard \tx200 \tab {\strike ActiveMenu}{\v IDH_CMSP_ACTIVEMENU}
+\par \plain\f0\fs18\cf0\i \tab {\strike GroupIndex}{\v IDH_USB_GROUPINDEX}
+\par \plain\f0\fs18\cf0 \tab {\strike MenuPlacing}{\v IDH_CMSP_MENUPLACING}
+\par \tab {\strike ReleaseButton}{\v IDH_CMSB_RELEASEBUTTON}
+\par 
+\par Properties in italics are redefined in {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS} while those in plain typeface are defined in {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS} and published in TPJMenuSpeedButton.
+\par \page 
+#{\footnote {#}IDH_MSB_METHODS}
+${\footnote {$}TPJMenuSpeedButton methods}
+
+\pard \plain \plain\f0\fs18\cf0\b Methods\plain\f0\fs18\cf0 
+\par 
+\par TPJMenuSpeedButton adds no methods to those inherited from {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}.
+\par \page 
+#{\footnote {#}IDH_MSB_EVENTS}
+${\footnote {$}TPJMenuSpeedButton events}
+
+\pard \plain \plain\f0\fs18\cf0\b Events\plain\f0\fs18\cf0 
+\par 
+\par TPJMenuSpeedButton adds no events to those inherited from {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}.
+\par \page 
+#{\footnote {#}IDH_LMSB_CLASS}
+${\footnote {$}TPJLinkedMenuSpeedButton}
+K{\footnote {K}TPJLinkedMenuSpeedButton}
+A{\footnote {A}TPJLinkedMenuSpeedButton_object;TPJLinkedMenuSpeedButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \{bmlt PJLinkedMenuSpeedButton.bmp\}\plain\f0\fs22\cf2\b  TPJLinkedMenuSpeedButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\ul Heirachy}{\v IDH_LMSB_HEIRACHY}          {\ul Properties}{\v IDH_LMSB_PROPERTIES}          {\ul Methods}{\v IDH_LMSB_METHODS}          {\ul Events}{\v IDH_LMSB_EVENTS}          {\strike See also}{\v !AL(TPJLinkedSpeedButton_object)}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Links to a master button and displays an associated pop-up menu when clicked.
+\par 
+\par \plain\f0\fs18\cf0\b Unit\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 {\strike PJMenuSpeedButtons}{\v IDH_PJMENUSPEEDBUTTONS}
+\par 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This is a speed button that can display an associated pop-up menu and can be linked to, and work in partnership with, a master speed button of type TPJLinkedSpeedButton. This button acts as an extension of master button when master button is activated or clicked, but acts independently when this button itself is clicked.\plain\f0\fs20\cf0 
+\par \page 
+#{\footnote {#}IDH_LMSB_HEIRACHY}
+${\footnote {$}TPJLinkedMenuSpeedButton heirachy}
+
+\pard \plain \plain\f0\fs18\cf0\b Heirachy\plain\f0\fs18\cf0 
+\par 
+\par {\strike TObject}{\v !AL(TObject_object,1)}
+\par      |
+\par {\strike TPersistent}{\v !AL(TPersistent_object,1)}
+\par      |
+\par {\strike TComponent}{\v !AL(TComponent_object,1)}
+\par      |
+\par {\strike TControl}{\v !AL(TControl_object,1)}
+\par      |
+\par {\strike TGraphicControl}{\v !AL(TGraphicControl_object,1)}
+\par      |
+\par {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}
+\par      |
+\par {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}
+\par      |
+\par {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}
+\par \page 
+#{\footnote {#}IDH_LMSB_PROPERTIES}
+${\footnote {$}TPJLinkedMenuSpeedButton properties}
+
+\pard \plain \plain\f0\fs18\cf0\b Properties\plain\f0\fs18\cf0 
+\par 
+\par \pard \tx200 The following properties are newly defined in TPJLinkedMenuSpeedButton:
+\par \plain\f0\fs8\cf0 
+\par \plain\f3\fs18\cf0 \tab {\strike AlignMenuToMaster}{\v IDH_LMSB_ALIGNMENUTOMASTER}\plain\f0\fs18\cf0 
+\par r\tab {\strike MasterButton}{\v IDH_LMSB_MASTERBUTTON}
+\par \tab {\strike UseDefaultGlyph}{\v IDH_LMSB_USEDEFAULTGLYPH}
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 while these protected properties of {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS} are published:
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 \tab {\strike ActiveMenu}{\v IDH_CMSP_ACTIVEMENU}
+\par \tab {\strike ReleaseButton}{\v IDH_CMSB_RELEASEBUTTON}
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 and all properties of {\strike TUngroupedSpeedButton}{\v IDH_USB_CLASS} are inherited, but the behaviour of the following properties differs from the base class:
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 \tab {\strike Flat}{\v IDH_LMSB_FLAT}
+\par \tab {\strike Enabled}{\v IDH_LMSB_ENABLED}
+\par \tab {\strike Glyph}{\v IDH_LMSB_GLYPH}
+\par \tab {\strike Height}{\v IDH_LMSB_HEIGHT}
+\par \tab {\strike Left}{\v IDH_LMSB_LEFT}
+\par \tab {\strike Top}{\v IDH_LMSB_TOP}
+\par \tab {\strike Width}{\v IDH_LMSB_WIDTH}
+\par 
+\par r = Read Only, run time property.
+\par \page 
+#{\footnote {#}IDH_LMSB_ALIGNMENUTOMASTER}
+${\footnote {$}TPJLinkedMenuSpeedButton.AlignMenuToMaster}
+K{\footnote {K}AlignMenuToMaster,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,AlignMenuToMaster;AlignMenuToMaster}
+A{\footnote {A}TPJLinkedMenuSpeedButton_AlignMenuToMaster;AlignMenuToMaster_property;AlignMenuToMaster}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.AlignMenuToMaster\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard \plain\f3\fs18\cf0 Determines whether menu is dropped down relative to this button or to the associated master {\strike PJLinkedSpeedButton}{\v IDH_LSB_CLASS}\plain\f0\fs18\cf0  control.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  AlignMenuToMaster: \plain\f4\fs18\cf0 Boolean\plain\f2\fs18\cf0 ;
+\par \pard \plain\f0\fs18\cf0 
+\par \plain\f3\fs18\cf0 When AlignMenuToMaster is True and {\strike MasterButton}{\v IDH_LMSB_MASTERBUTTON} is assigned the popup menu referenced by the \plain\f0\fs18\cf0 {\strike ActiveMenu}{\v IDH_CMSP_ACTIVEMENU} property\plain\f3\fs18\cf0  is aligned to the master button when it is displayed. When AlignMenuToMaster is False (default) the menu is displayed aligned to this linked menu speed button. \plain\f0\fs18\cf0 
+\par \page 
+#{\footnote {#}IDH_LMSB_ENABLED}
+${\footnote {$}TPJLinkedMenuSpeedButton.Enabled}
+K{\footnote {K}Enabled,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,Enabled;Enabled}
+A{\footnote {A}TPJLinkedMenuSpeedButton_Enabled;Enabled_property;Enabled}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.Enabled\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Controls whether the control responds to mouse, keyboard, and timer events.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Enabled: Boolean;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The Enabled property acts in the same way as the {\strike Enabled}{\v !AL(TControl_Enabled,1)} property inherited from {\strike TControl}{\v !AL(TControl_object,1)} except that, any change in an associated master button's Enabled property is reflected in this button's property.
+\par \page 
+#{\footnote {#}IDH_LMSB_FLAT}
+${\footnote {$}TPJLinkedMenuSpeedButton.Flat}
+K{\footnote {K}Flat,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,Flat;Flat}
+A{\footnote {A}TPJLinkedMenuSpeedButton_Flat;Flat_property;Flat}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.Flat\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Determines whether the button has a a 3D border that provides a raised or lowered look.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Flat: Boolean;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 When the menu button is linked to a master {\strike TPJLinkedSpeedButton}{\v IDH_LSB_CLASS} Flat always takes on the value of the linked button's Flat property.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 If this button is not linked to a master button then Flat has the same behaviour as in {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}: setting Flat to True to removes the raised border when the button is unselected and the lowered border when the button is clicked or selected.
+\par \page 
+#{\footnote {#}IDH_LMSB_GLYPH}
+${\footnote {$}TPJLinkedMenuSpeedButton.Glyph}
+K{\footnote {K}Glyph,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,Glyph;TPJLinkedMenuSpeedButton}
+A{\footnote {A}TPJLinkedMenuSpeedButton_Glyph;Glyph_property;Glyph}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.Glyph\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}          {\strike See also}{\v !AL(TPJLinkedMenuSpeedButton_UseDefaultGlyph)}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Specifies the bitmap that appears on the speed button. 
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Glyph: {\strike TBitmap}{\v !AL(TBitmap_object,1)};
+\par \pard \plain\f0\fs18\cf0 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Glyph acts identically to the {\strike Glyph}{\v !AL(TSpeedButton_Glyph,1)} property inherited from {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}, except that when {\strike UseDefaultGlyph}{\v IDH_LMSB_USEDEFAULTGLYPH} is True, the Glyph displays a downward pointing arrow. This default glyph is used by default.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Setting the Glyph property always resets the UseDefaultGlyph property to False.
+\par \page 
+#{\footnote {#}IDH_LMSB_HEIGHT}
+${\footnote {$}TPJLinkedMenuSpeedButton.Height}
+K{\footnote {K}Height,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,Height;Height}
+A{\footnote {A}TPJLinkedMenuSpeedButton_Height;Height_property;Height}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.Height\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Specifies the vertical size of the control in pixels.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Height: Integer;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 When the button is linked to a master button this property may not be changed directly since the button is attached to the master button's right hand side. Changing the master button's Height property also changes the value of this property. When not linked it works in the same way as the {\strike Height}{\v !AL(TControl_Height,1)} property inherited from {\strike TControl}{\v !AL(TControl_object,1)}.
+\par 
+\par \page 
+#{\footnote {#}IDH_LMSB_LEFT}
+${\footnote {$}TPJLinkedMenuSpeedButton.Left}
+K{\footnote {K}Left,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,Left;Left}
+A{\footnote {A}TPJLinkedMenuSpeedButton_Left;Left_property;Left}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.Left\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Specifies the horizontal coordinate of the left edge of a component relative to the form in pixels.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Left: Integer;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 When the button is linked to a master button this property may not be changed directly since the button is attached to the master button's right hand side. Changing the master button's Left property also changes the value of this property. When not linked it works in the same way as the {\strike Left}{\v !AL(TControl_Left,1)} property inherited from {\strike TControl}{\v !AL(TControl_object,1)}.
+\par \page 
+#{\footnote {#}IDH_LMSB_MASTERBUTTON}
+${\footnote {$}TPJLinkedMenuSpeedButton.MasterButton}
+K{\footnote {K}MasterButton,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,MasterButton;MasterButton}
+A{\footnote {A}TPJLinkedMenuSpeedButton_MasterButton;MasterButton_property;MasterButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.MasterButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Refers to the linked TPJLinkedSpeedButton control.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  MasterButton: {\strike TPJLinkedSpeedButton}{\v IDH_LSB_CLASS};
+\par \pard \plain\f0\fs18\cf0 
+\par Read only property that provides reference to this button's master button. The speed button referenced by this property has a reference to this speed button in its {\strike ActiveMenu}{\v IDH_CMSP_ACTIVEMENU} property.
+\par \page 
+#{\footnote {#}IDH_LMSB_TOP}
+${\footnote {$}TPJLinkedMenuSpeedButton.Top}
+K{\footnote {K}Top,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,Top;Top}
+A{\footnote {A}TPJLinkedMenuSpeedButton_Top;Top_property;Top}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.Top\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Specifies the Y coordinate of the top left corner of a control, relative to its parent or containing control in pixels. 
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Top: Integer;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 When the button is linked to a master button this property may not be changed directly since the button is attached to the master button's right hand side. Changing the master button's Top property also changes the value of this property. When not linked it works in the same way as the {\strike Top}{\v !AL(TControl_Top,1)} property inherited from {\strike TControl}{\v !AL(TControl_object,1)}.
+\par \page 
+#{\footnote {#}IDH_LMSB_USEDEFAULTGLYPH}
+${\footnote {$}TPJLinkedMenuSpeedButton.UseDefaultGlyph}
+K{\footnote {K}UseDefaultGlyph,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,UseDefaultGlyph;UseDefaultGlyph}
+A{\footnote {A}TPJLinkedMenuSpeedButton_UseDefaultGlyph;UseDefaultGlyph_property;UseDefaultGlyph}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.UseDefaultGlyph\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}          {\strike See also}{\v !AL(TPJLinkedMenuSpeedButton_Glyph)}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Determines if the button displays a user provided glyph or the default one.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  UseDefaultGlyph: Boolean;
+\par \pard \plain\f0\fs18\cf0 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Setting this property to True causes the button to set the {\strike Glyph}{\v IDH_LMSB_GLYPH} property to the default, downard pointing arrow. Setting UseDefaultGlyph to False clears the Glyph property.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Assigning a bitmap to the Glyph property changes the value of UseDefaultGlyph to False.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The default value is True - the default glyph is always used when the component is dropped on a form at design time.
+\par \page 
+#{\footnote {#}IDH_LMSB_WIDTH}
+${\footnote {$}TPJLinkedMenuSpeedButton.Width}
+K{\footnote {K}Width,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,Width;Width}
+A{\footnote {A}TPJLinkedMenuSpeedButton_Width;Width_property;Width}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.Width\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Specifies the horizontal size of the control in pixels.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Width: Integer;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Use the Width property to read or change the width of the control. The default value of Width is 14.
+\par \page 
+#{\footnote {#}IDH_LMSB_METHODS}
+${\footnote {$}TPJLinkedMenuSpeedButton methods}
+
+\pard \plain \plain\f0\fs18\cf0\b Methods\plain\f0\fs18\cf0 
+\par 
+\par TPJLinkedMenuSpeedButton inherits all the methods of {\strike TPJCustomMenuSpeedButton}{\v IDH_CMSB_CLASS}. It overrides the following public method:
+\par \plain\f0\fs8\cf0 
+\par \pard \tx200 \plain\f0\fs18\cf0 \tab {\strike SetBounds}{\v IDH_LMSB_SETBOUNDS}
+\par \page 
+#{\footnote {#}IDH_LMSB_SETBOUNDS}
+${\footnote {$}TPJLinkedMenuSpeedButton.SetBounds}
+K{\footnote {K}SetBounds,TPJLinkedMenuSpeedButton;TPJLinkedMenuSpeedButton,SetBounds;SetBounds}
+A{\footnote {A}TPJLinkedMenuSpeedButton_SetBounds;SetBounds_method;SetBounds}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedMenuSpeedButton.SetBounds\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Sets the Left, Top, Width, and Height properties all at once.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b procedure\plain\f2\fs18\cf0  SetBounds(ALeft, ATop, AWidth, AHeight: Integer); \plain\f2\fs18\cf0\b override\plain\f2\fs18\cf0 ;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Use SetBounds to change all of the component's boundary properties at one time. The same effect can be achieved by setting the {\strike Left}{\v IDH_LMSB_LEFT}, {\strike Top}{\v IDH_LMSB_TOP}, {\strike Width}{\v IDH_LMSB_WIDTH}, and {\strike Height}{\v IDH_LMSB_HEIGHT} properties separately, but SetBounds changes all four properties at once ensuring that the control will not repaint between changes.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Specify the values for the Left, Top, Width, and Height properties as the value of the ALeft, ATop, AWidth, and AHeight parameters, respectively.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 SetBounds is overridden in TPJLinkedMenuSpeedButton so that when the button is linked to a master button only the Width property can be changed: the button always sticks to the right hand edge of the master button.
+\par \page 
+#{\footnote {#}IDH_LMSB_EVENTS}
+${\footnote {$}TPJLinkedMenuSpeedButton events}
+
+\pard \plain \plain\f0\fs18\cf0\b Events\plain\f0\fs18\cf0 
+\par 
+\par TPJLinkedMenuSpeedButton adds no events to those inherited from {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}.
+\par \page 
+#{\footnote {#}IDH_LSB_CLASS}
+${\footnote {$}TPJLinkedSpeedButton}
+K{\footnote {K}TPJLinkedSpeedButton}
+A{\footnote {A}TPJLinkedSpeedButton_object;TPJLinkedSpeedButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \{bmlt PJLinkedSpeedButton.bmp\}\plain\f0\fs22\cf2\b  TPJLinkedSpeedButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\ul Heirachy}{\v IDH_LSB_HEIRACHY}          {\ul Properties}{\v IDH_LSB_PROPERTIES}          {\ul Methods}{\v IDH_LSB_METHODS}          {\ul Events}{\v IDH_LSB_EVENTS}          {\strike See also}{\v !AL(TPJLinkedMenuSpeedButton_object)}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard TPJLinkedSpeedButton is a speed button that can link to and control a slave button that access a pop-up menu.
+\par 
+\par \plain\f0\fs18\cf0\b Unit\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 {\strike PJMenuSpeedButtons}{\v IDH_PJMENUSPEEDBUTTONS}
+\par 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This is a speed button that can work in association with a slave pop-up menu speed button of type TPJLinkedMenuSpeedButton. When this button is activated or clicked it captures the slave button and makes it act as if part of this button.
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The slave button is aligned to the right hand side of the button and when the button is moved the slave moves with it. Setting the Enabled or Flat properties of the button also sets the equivalent properties of the slave button to the same value.\plain\f0\fs20\cf0 
+\par \page 
+#{\footnote {#}IDH_LSB_HEIRACHY}
+${\footnote {$}TPJLinkedSpeedButton heirachy}
+
+\pard \plain \plain\f0\fs18\cf0\b Heirachy\plain\f0\fs18\cf0 
+\par 
+\par {\strike TObject}{\v !AL(TObject_object,1)}
+\par      |
+\par {\strike TPersistent}{\v !AL(TPersistent_object,1)}
+\par      |
+\par {\strike TComponent}{\v !AL(TComponent_object,1)}
+\par      |
+\par {\strike TControl}{\v !AL(TControl_object,1)}
+\par      |
+\par {\strike TGraphicControl}{\v !AL(TGraphicControl_object,1)}
+\par      |
+\par {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)}
+\par      |
+\par {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}
+\par \page 
+#{\footnote {#}IDH_LSB_PROPERTIES}
+${\footnote {$}TPJLinkedSpeedButton properties}
+
+\pard \plain \plain\f0\fs18\cf0\b Properties\plain\f0\fs18\cf0 
+\par 
+\par In addition to the properties inherited from {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS} TPJLinkedSpeedButton published the following new propert\plain\f3\fs18\cf0 ies\plain\f0\fs18\cf0 :
+\par \plain\f0\fs8\cf0 
+\par \pard \tx200 \plain\f0\fs18\cf0 \tab {\strike MenuButton}{\v IDH_LSB_MENUBUTTON}
+\par \plain\f3\fs18\cf0 \tab {\strike TriggerDefMenuItem}{\v IDH_LSB_TRIGGERDEFMENUITEM}\plain\f0\fs18\cf0 
+\par 
+\par The following inherited properties also have slightly different behaviour in TPJLinkedSpeedButton:
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 \tab {\strike Enabled}{\v IDH_LSB_ENABLED}
+\par \tab {\strike Flat}{\v IDH_LSB_FLAT}
+\par \page 
+#{\footnote {#}IDH_LSB_ENABLED}
+${\footnote {$}TPJLinkedSpeedButton.Enabled}
+K{\footnote {K}Enabled,TPJLinkedSpeedButton;TPJLinkedSpeedButton,Enabled;Enabled}
+A{\footnote {A}TPJLinkedSpeedButton_Enabled;Enabled_property;Enabled}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedSpeedButton.Enabled\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedSpeedButton}{\v IDH_LSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs20\cf0 
+\par \pard \plain\f0\fs18\cf0 Controls whether the control responds to mouse, keyboard, and timer events.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Enabled: Boolean;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The Enabled property acts in the same way as the {\strike Enabled}{\v !AL(TControl_Enabled,1)} property inherited from {\strike TControl}{\v !AL(TControl_object,1)} except that any change in this control's {\strike Enabled}{\v IDH_LMSB_ENABLED} property is also applied to any {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS} control referenced by the {\strike MenuButton}{\v IDH_LSB_MENUBUTTON} property.
+\par \page 
+#{\footnote {#}IDH_LSB_FLAT}
+${\footnote {$}TPJLinkedSpeedButton.Flat}
+K{\footnote {K}Flat,TPJLinkedSpeedButton;TPJLinkedSpeedButton,Flat;Flat}
+A{\footnote {A}TPJLinkedSpeedButton_Flat;Flat_property;Flat}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedSpeedButton.Flat\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedSpeedButton}{\v IDH_LSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Determines whether the button has a a 3D border that provides a raised or lowered look.
+\par 
+\par \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  Flat: Boolean;\plain\f0\fs18\cf0 
+\par 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 The Flat property acts in the same way as the {\strike Flat}{\v !AL(TSpeedButton_Flat,1)} property inherited from {\strike TSpeedButton}{\v !AL(TSpeedButton_object,1)} except that any change in the property is also applied to the {\strike Flat}{\v IDH_LMSB_FLAT} property of any {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS} control referenced by the {\strike MenuButton}{\v IDH_LSB_MENUBUTTON} property.
+\par \page 
+#{\footnote {#}IDH_LSB_MENUBUTTON}
+${\footnote {$}TPJLinkedSpeedButton.MenuButton}
+K{\footnote {K}MenuButton,TPJLinkedSpeedButton;TPJLinkedSpeedButton,MenuButton;MenuButton}
+A{\footnote {A}TPJLinkedSpeedButton_MenuButton;MenuButton_property;MenuButton}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedSpeedButton.MenuButton\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedSpeedButton}{\v IDH_LSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard Refers to the linked menu button.
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  MenuButton: {\strike TPJLinkedMenuSpeedButton}{\v IDH_LMSB_CLASS};\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 Set the MenuButton property to link a TPJLinkedMenuSpeedButton to this button. The linked button is moved to line up with the right hand side of this button and the buttons move together. Setting the Enabled and Flat properties of TPJLinkedSpeedButton also sets the respective properties in the button referenced by MenuButton.
+\par \page 
+#{\footnote {#}IDH_LSB_TRIGGERDEFMENUITEM}
+${\footnote {$}TPJLinkedSpeedButton.TriggerDefMenuItem}
+K{\footnote {K}TriggerDefMenuItem,TPJLinkedSpeedButton;TPJLinkedSpeedButton,TriggerDefMenuItem;TriggerDefMenuItem}
+A{\footnote {A}TPJLinkedSpeedButton_TriggerDefMenuItem;TriggerDefMenuItem_property;TriggerDefMenuItem}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJLinkedSpeedButton.TriggerDefMenuItem\plain\f0\fs18\cf0 
+\par \plain\f0\fs12\cf0 
+\par \plain\f0\fs18\cf0 {\strike TPJLinkedSpeedButton}{\v IDH_LSB_CLASS}
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard \plain\f3\fs18\cf0 Determines whether a click on the button "clicks" the default menu item of the pop-up menu associated with any linked speed menu button\plain\f0\fs18\cf0 .
+\par 
+\par \pard \keep \plain\f2\fs18\cf0\b property\plain\f2\fs18\cf0  TriggerDefMenuItem: \plain\f4\fs18\cf0 Boolean\plain\f2\fs18\cf0 ;\plain\f0\fs18\cf0 
+\par \pard 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f3\fs18\cf0 Normally (when TriggerDefMenuItem is false - the default), clicking a linked speed button fires either the button's OnClick event or triggers any associated action.
+\par \plain\f3\fs8\cf0 
+\par \plain\f3\fs18\cf0 When TriggerDefMenuItem is True the default menu item of the active menu of a linked menu speed button is triggered and the neither the OnClick event nor any associated action are triggered. If any of the following conditions are false then TriggerDefMenuItem is ignored and normal processing takes place as if TriggerDefMenuItem were false.
+\par \plain\f3\fs8\cf0 
+\par \plain\f3\fs18\cf0\i Conditions for triggering the default menu item:\plain\f3\fs18\cf0 
+\par \plain\f3\fs8\cf0 
+\par \pard \fi-400 \li400 \tx400 \plain\f1\fs18\cf0 \'A7\plain\f5\fs18\cf0 \tab The {\strike MenuButton}{\v IDH_LSB_MENUBUTTON} property must reference a linked menu speed button.
+\par \plain\f1\fs18\cf0 \'A7\plain\f5\fs18\cf0 \tab MenuButton.{\strike ActiveMenu}{\v IDH_CMSP_ACTIVEMENU} must reference a popup menu.
+\par \plain\f1\fs18\cf0 \'A7\plain\f5\fs18\cf0 \tab The menu referenced by MenuButton.ActiveMenu must contain a default menu item.\plain\f3\fs18\cf0 
+\par \page 
+#{\footnote {#}IDH_LSB_METHODS}
+${\footnote {$}TPJLinkedSpeedButton methods}
+
+\pard \plain \plain\f0\fs18\cf0\b Methods\plain\f0\fs18\cf0 
+\par 
+\par TPJLinkedSpeedButton adds no public methods to those inherited from {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}.
+\par \page 
+#{\footnote {#}IDH_LSB_EVENTS}
+${\footnote {$}TPJLinkedSpeedButton events}
+
+\pard \plain \plain\f0\fs18\cf0\b Events\plain\f0\fs18\cf0 
+\par 
+\par TPJLinkedMenuSpeedButton adds no events to those inherited from {\strike TPJUngroupedSpeedButton}{\v IDH_USB_CLASS}.
+\par \page 
+#{\footnote {#}IDH_TPJMENUPLACING}
+${\footnote {$}TPJMenuPlacing}
+K{\footnote {K}TPJMenuPlacing}
+A{\footnote {A}TPJMenuPlacing}
+
+\pard \plain \pard \keepn \plain\f0\fs8\cf0 
+\par \plain\f0\fs22\cf2\b TPJMenuPlacing\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0  \plain\f0\fs18\cf0 
+\par \pard \plain\f0\fs18\cf0\b Unit\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 {\strike PJMenuSpeedButtons}{\v IDH_PJMENUSPEEDBUTTONS}
+\par 
+\par \plain\f0\fs18\cf0\b Description\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 This is the type of the TPJCustomMenuSpeedButton component's {\strike MenuPlacing}{\v IDH_CMSP_MENUPLACING} property. It is declared as:
+\par \plain\f0\fs8\cf0 
+\par \pard \keep \plain\f2\fs18\cf0\b type \plain\f2\fs18\cf0 TPJMenuPlacing = (mpTopLeft, mpBottomLeft,
+\par \pard   mpTopRight, mpBottomRight);\plain\f0\fs18\cf0 
+\par \plain\f0\fs8\cf0 
+\par \plain\f0\fs18\cf0 See the {\strike MenuPlacing}{\v IDH_CMSP_MENUPLACING} help topic for further details.
+\par \page 
+}
